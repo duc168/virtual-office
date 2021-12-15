@@ -7,7 +7,8 @@
     "start": "cd server && ts-node-dev --project tsconfig.server.json --respawn --transpile-only index.ts",
     "heroku-postbuild": "npm i && cd types && npm i && cd ../server && tsc --project tsconfig.server.json",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-server": "ncc build server/index.ts -o server-production"
+    "build-server": "ncc build server/index.ts -o server-production",
+    "build-client": "ncc build client/src/export.ts -o client-production"
   },
   "repository": {
     "type": "git",
