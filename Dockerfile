@@ -3,7 +3,7 @@ WORKDIR /source
 COPY . .
 RUN npm install
 RUN mv server/tsconfig.server.json server/tsconfig.json
-RUN npm run build-production
+RUN npm run build-server
 RUN mv server/tsconfig.json server/tsconfig.server.json
 
 # FROM nginx:stable-alpine
